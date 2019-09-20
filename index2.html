@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://files.cnblogs.com/files/lianmin/jquery1.11.1.js?v=1"></script>
+    <script src="http://files.cnblogs.com/files/lianmin/slider1.2.min.js?v=1"></script>
+    <link rel="stylesheet" href="http://files.cnblogs.com/files/lianmin/slider.min.css?v=1">
+    <script src="http://files.cnblogs.com/files/lianmin/chuncai.js?v=1"></script>
+</head>
+<body>
+    <div id="imgBar"></div>
+    <script>
+        
+    $("#imgBar").slider({
+        imgs: [
+            "https://images0.cnblogs.com/blog/708426/201501/080209549216360.jpg",
+            "https://images0.cnblogs.com/blog/708426/201501/100557406251638.jpg",
+            "https://images0.cnblogs.com/blog/708426/201501/100602118284450.jpg"],
+            scale: 128 / 36,
+            border: true,
+            delay: 2200,
+            x: 10,
+            y: 3
+        });
+
+    $.chuncai({more:{"春菜简介":{key:"欢迎到 github 上来fork春菜！！！","去 github":function(){makeOpen("https://github.com/shalldie/chuncai")}},"打赏我":{key:"暂时只支持支付宝~ 我会把这笔钱改善一个程序员的生活","支付宝":function(){makeOpen("http://www.cnblogs.com/lianmin/gallery/image/165558.html");}}}});
+
+    function makeOpen(url){
+    return eval('wind' + 'ow.o' + 'pen("'+url+'")');
+    }
+    </script>
+</body>
+</html>
